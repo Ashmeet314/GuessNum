@@ -18,6 +18,11 @@ let remaining = 10
 let nearclose = document.getElementById("nearclose")
 let modbtn = document.getElementById("mode")
 let mode ="dark"
+let playAgainBtn = document.createElement("button")
+let plagainbox = document.getElementById("plagainbox")
+console.log(num);
+playAgainBtn.classList.add("buttons")
+playAgainBtn.innerText="Play Again!"
 
 modbtn.addEventListener("click",()=>{
     if(mode=="light"){
@@ -47,6 +52,10 @@ let gameloop = function(){
     let inpval = parseInt(inp.value);
     
     boxii.innerHTML="";
+
+    playAgainBtn.addEventListener("click",()=>{
+        location.reload();
+    })
     
     if(remaining===1){
         let remarr = [inp,btn,pre1,pre,rem1,rem,nearclose,heading];
@@ -60,6 +69,7 @@ let gameloop = function(){
         boxi.style.flexDirection="column"
         boxi.appendChild(crcVal0);
         boxi.appendChild(crcVal);
+        plagainbox.appendChild(playAgainBtn);
         if(mode=="light"){
             box.classList.add("imagelosedr")
         } else if(mode=="dark"){
@@ -82,6 +92,7 @@ let gameloop = function(){
         boxi.style.flexDirection="column"
         boxi.appendChild(crcVal0);
         boxi.appendChild(crcVal);
+        plagainbox.appendChild(playAgainBtn);
         if(mode=="light"){
             box.classList.add("imagewindr")
         } else if(mode=="dark"){
