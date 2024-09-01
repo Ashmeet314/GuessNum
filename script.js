@@ -18,7 +18,7 @@ let remaining = 10
 let nearclose = document.getElementById("nearclose")
 let modbtn = document.getElementById("mode")
 let mode ="dark"
-console.log(num);
+
 modbtn.addEventListener("click",()=>{
     if(mode=="light"){
         body.style.backgroundColor="white";
