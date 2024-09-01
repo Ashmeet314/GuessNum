@@ -1,5 +1,5 @@
 
-let num = Math.floor(Math.random() * 31);
+let num = Math.floor(Math.random() * 100);
 let box = document.getElementById("box")
 let body = document.querySelector("body")
 let pre1 = document.getElementById("pre1")
