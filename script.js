@@ -89,7 +89,7 @@ let gameloop = function(){
         }       
     }
     else if (num!==inpval){
-        if(num-10<inpval<num+10){
+        if(num-10<inpval && inpval<num+10){
             nearclose.innerHTML="//You are near that no."
         }
         else{
