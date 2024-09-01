@@ -89,11 +89,11 @@ let gameloop = function(){
         }       
     }
     else if (num!==inpval){
-        if(inpval>num){
-            nearclose.innerHTML="//Too large no."
+        if(num-10<inpval<num+10){
+            nearclose.innerHTML="//You are near that no."
         }
-        else if (inpval<num){
-            nearclose.innerHTML="//Too small no."
+        else{
+            nearclose.innerHTML="//You are too far away"
         }
         remaining = remaining-1;
         rem1.innerHTML = remaining;    
